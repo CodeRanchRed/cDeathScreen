@@ -134,8 +134,7 @@ local function OnPlayerDied(killerEntity, weaponHash, deathX, deathY, deathZ)
             if IsPedAPlayer(killerEntity) then
                 killerSrc = NetworkGetEntityOwner(killerEntity)
             else
-                local model = GetEntityModel(killerEntity)
-                killerName = GetLabelText(GetDisplayNameFromVehicleModel(model)) or T("unknown_npc")
+                killerName = T("unknown_npc")
             end
         end
     end
